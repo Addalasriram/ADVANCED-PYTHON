@@ -1,0 +1,13 @@
+def decorator_function(original_function):
+    def wrapper_function(*args, **kwargs):
+        print("Before function execution")
+        result = original_function(*args, **kwargs)
+        print("After function execution")
+        return result
+    return wrapper_function
+
+@decorator_function
+def display():
+    print("Hello Sriram!")
+
+display()
